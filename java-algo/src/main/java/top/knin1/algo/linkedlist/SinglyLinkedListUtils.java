@@ -1,7 +1,5 @@
 package top.knin1.algo.linkedlist;
 
-import java.util.Comparator;
-
 /**
  * @author KNin1
  * 基于单链表的基础操作

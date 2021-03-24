@@ -20,6 +20,25 @@ public class SinglyLinkedList<T> {
         return p;
     }
 
+    /**
+     * 查找 element 等于 value 的结点的前一个结点
+     * @param value
+     * @return
+     */
+    public Node<T> findPrevNode(T value) {
+        if (head == null) {
+            return null;
+        }
+        Node<T> p = head;
+        while (p.getNext() != null) {
+            if (value.equals(p.getNext().getElement())) {
+                return p;
+            }
+            p = p.getNext();
+        }
+        return null;
+    }
+
     public Node<T> findByIndex(int index) {
         Node<T> p = head;
         int pos = 0;
@@ -167,6 +186,35 @@ public class SinglyLinkedList<T> {
             }
             p = p.getNext();
         }
+    }
+
+    /**
+     * 删除结点 p 的下一个结点
+     * @param p
+     */
+    public void deleteNextNode(Node<T> p) {
+        if (p == null || p.getNext() == null) {
+            return;
+        }
+        p.setNext(p.getNext().getNext());
+    }
+
+    /**
+     * 删除链表尾结点
+     */
+    public void deleteTailNode() {
+        if (head == null) {
+            return;
+        }
+        if (head.getNext() == null) {
+            head = null;
+            return;
+        }
+        Node<T> p = head;
+        while (p.getNext().getNext() != null) {
+            p = p.getNext();
+        }
+        p.setNext(null);
     }
 
     public void printAll() {
