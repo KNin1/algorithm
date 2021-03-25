@@ -1,4 +1,6 @@
-package top.knin1.algo.linkedlist;
+package top.knin1.algo.stack;
+
+import top.knin1.algo.linkedlist.SinglyLinkedList;
 
 /**
  * 基于单链表实现栈

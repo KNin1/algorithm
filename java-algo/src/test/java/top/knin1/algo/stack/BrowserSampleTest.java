@@ -1,4 +1,4 @@
-package top.knin1.algo.linkedlist;
+package top.knin1.algo.stack;
 
 import org.junit.Assert;
 import org.junit.Test;

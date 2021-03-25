@@ -1,4 +1,4 @@
-package top.knin1.algo.linkedlist;
+package top.knin1.algo.stack;
 
 /**
  * 基于 Stack 实现浏览器前进、后退功能
