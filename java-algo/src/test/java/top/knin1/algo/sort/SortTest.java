@@ -27,6 +27,13 @@ public class SortTest {
         printArray(arr);
     }
 
+    @Test
+    public void testMergeSort() {
+        int[] arr = {10, 90, 2, 100, 212, 345};
+        MergeSort.sort(arr, arr.length);
+        printArray(arr);
+    }
+
     private static void printArray(int[] arr) {
         for (int value : arr) {
             System.out.print(value + " ");
