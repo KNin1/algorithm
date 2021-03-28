@@ -3,7 +3,7 @@ package top.knin1.algo.sort;
 /**
  * 归并排序
  * @author KNin1
- * 2021-03-28
+ * @date 2021-03-28
  */
 public class MergeSort {
     public static void sort(int[] arr, int n) {
