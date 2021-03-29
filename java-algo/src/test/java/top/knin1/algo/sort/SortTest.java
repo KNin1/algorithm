@@ -41,6 +41,13 @@ public class SortTest {
         printArray(arr);
     }
 
+    @Test
+    public void testCountingSort() {
+        int[] arr = {2, 5, 3, 0, 2, 3, 0, 3};
+        CountingSort.sort(arr, arr.length);
+        printArray(arr);
+    }
+
     private static void printArray(int[] arr) {
         for (int value : arr) {
             System.out.print(value + " ");
