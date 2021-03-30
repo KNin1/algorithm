@@ -48,6 +48,13 @@ public class SortTest {
         printArray(arr);
     }
 
+    @Test
+    public void testBucketSort() {
+        int[] arr = {4, 5, 0, 9, 3, 3, 1, 9, 8, 7};
+        BucketSort.sort(arr, arr.length, 3);
+        printArray(arr);
+    }
+
     private static void printArray(int[] arr) {
         for (int value : arr) {
             System.out.print(value + " ");
