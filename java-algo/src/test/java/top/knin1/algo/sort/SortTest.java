@@ -55,6 +55,13 @@ public class SortTest {
         printArray(arr);
     }
 
+    @Test
+    public void testRadixSort() {
+        int[] arr = {92971917, 92977626, 92971912};
+        RadixSort.sort(arr, arr.length);
+        printArray(arr);
+    }
+
     private static void printArray(int[] arr) {
         for (int value : arr) {
             System.out.print(value + " ");
