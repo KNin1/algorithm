@@ -42,6 +42,13 @@ public class SortTest {
     }
 
     @Test
+    public void testDualPivotQuickSort() {
+        int[] arr = {10, 90, 2, 100, 212, 345};
+        DualPivotQuickSort.sort(arr);
+        printArray(arr);
+    }
+
+    @Test
     public void testCountingSort() {
         int[] arr = {2, 5, 3, 0, 2, 3, 0, 3};
         CountingSort.sort(arr, arr.length);
