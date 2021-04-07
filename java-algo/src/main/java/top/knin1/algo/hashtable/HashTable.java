@@ -140,7 +140,7 @@ public class HashTable<K, V> {
     }
 
     private void ensureCapacity() {
-        if (use < table.length * factor) {
+        if (use < capacity * factor) {
             return;
         }
         resize();
