@@ -1,8 +1,6 @@
 package top.knin1.algo.binarytree;
 
 import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.Queue;
 
 /**
  * @author KNin1
