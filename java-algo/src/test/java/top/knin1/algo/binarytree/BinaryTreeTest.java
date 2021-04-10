@@ -42,6 +42,9 @@ public class BinaryTreeTest {
         bst.insert("C#");
 
         BinaryTreeAlgo.inOrderTraverse(bst.getRoot());
+        System.out.println();
+
+        Assert.assertEquals(2, BinaryTreeAlgo.calcTreeHeight(bst.getRoot()));
 
         Assert.assertNotNull(bst.find("C++"));
         Assert.assertNull(bst.find("Ruby"));

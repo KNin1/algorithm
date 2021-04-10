@@ -50,4 +50,16 @@ public class BinaryTreeAlgo {
             }
         }
     }
+
+    /**
+     * 计算二叉树的高度
+     */
+    public static <T> int calcTreeHeight(TreeNode<T> node) {
+        if (node == null || (node.left == null && node.right == null)) {
+            return 0;
+        }
+        int leftChildHeight = calcTreeHeight(node.left);
+        int rightChildHeight = calcTreeHeight(node.right);
+        return leftChildHeight > rightChildHeight ? leftChildHeight + 1 : rightChildHeight + 1;
+    }
 }
