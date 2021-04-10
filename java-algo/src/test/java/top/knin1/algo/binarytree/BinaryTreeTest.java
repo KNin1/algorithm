@@ -1,5 +1,6 @@
 package top.knin1.algo.binarytree;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -29,5 +30,23 @@ public class BinaryTreeTest {
         System.out.println();
 
         BinaryTreeAlgo.layerTraverse(root);
+    }
+
+    @Test
+    public void testBST() {
+        BinarySearchTree<String> bst = new BinarySearchTree<>();
+        bst.insert("Java");
+        bst.insert("C++");
+        bst.insert("Python");
+        bst.insert("Go");
+        bst.insert("C#");
+
+        BinaryTreeAlgo.inOrderTraverse(bst.getRoot());
+
+        Assert.assertNotNull(bst.find("C++"));
+        Assert.assertNull(bst.find("Ruby"));
+
+        bst.delete("Python");
+        Assert.assertNull(bst.find("Python"));
     }
 }
