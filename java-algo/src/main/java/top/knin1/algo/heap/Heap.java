@@ -20,6 +20,7 @@ public class Heap<T> {
         data = new Object[capacity];
     }
 
+    @SuppressWarnings("unchecked")
     public void insert(T value) {
         if (count >= capacity) {
             return;
@@ -49,6 +50,7 @@ public class Heap<T> {
     /**
      * 自上而下堆化
      */
+    @SuppressWarnings("unchecked")
     private void heapify(int i) {
         while (true) {
             int minPos = i;
