@@ -1,5 +1,6 @@
 package top.knin1.algo.heap;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Comparator;
@@ -46,5 +47,22 @@ public class HeapTest {
         System.out.println("------------ remove top ------------");
         heap.removeTop();
         heap.printAll();
+    }
+
+    @Test
+    public void testHeapSort() {
+        Person[] persons = {
+            new Person(30, "KNin1"),
+            new Person(23, "xiaoming"),
+            new Person(27, "laowang"),
+            new Person(50, "Tom")
+        };
+        HeapSort<Person> sorter = new HeapSort<>(getComparator());
+        sorter.sort(persons);
+        for (Person person : persons) {
+            System.out.println(person);
+        }
+
+        Assert.assertEquals("KNin1", persons[0].name);
     }
 }
