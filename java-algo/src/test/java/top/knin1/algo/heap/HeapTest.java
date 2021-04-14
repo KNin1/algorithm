@@ -32,8 +32,8 @@ public class HeapTest {
     }
 
     @Test
-    public void testHeap() {
-        Heap<Person> heap = new Heap<Person>(10, getComparator());
+    public void testMaxHeap() {
+        Heap<Person> heap = new MaxHeap<>(10, getComparator());
         heap.insert(new Person(30, "KNin1"));
         heap.insert(new Person(23, "xiaoming"));
         heap.insert(new Person(27, "laowang"));
@@ -64,5 +64,23 @@ public class HeapTest {
         }
 
         Assert.assertEquals("KNin1", persons[0].name);
+    }
+
+    @Test
+    public void testMinHeap() {
+        Heap<Person> heap = new MinHeap<>(10, getComparator());
+        heap.insert(new Person(30, "KNin1"));
+        heap.insert(new Person(23, "xiaoming"));
+        heap.insert(new Person(27, "laowang"));
+        heap.insert(new Person(50, "Tom"));
+        heap.printAll();
+
+        System.out.println("------------ remove top ------------");
+        heap.removeTop();
+        heap.printAll();
+
+        System.out.println("------------ remove top ------------");
+        heap.removeTop();
+        heap.printAll();
     }
 }
