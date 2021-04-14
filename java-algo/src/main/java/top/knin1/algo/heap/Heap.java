@@ -54,6 +54,22 @@ public abstract class Heap<T> {
         return count >= capacity;
     }
 
+    public boolean isEmpty() {
+        return count == 0;
+    }
+
+    @SuppressWarnings("unchecked")
+    public T top() {
+        if (isEmpty()) {
+            return null;
+        }
+        return (T) data[0];
+    }
+
+    public Object[] getData() {
+        return data;
+    }
+
     protected void swap(int index1, int index2) {
         Object tmp = data[index1];
         data[index1] = data[index2];

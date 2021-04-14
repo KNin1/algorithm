@@ -83,4 +83,19 @@ public class HeapTest {
         heap.removeTop();
         heap.printAll();
     }
+
+    @Test
+    public void testTopK() {
+        Person[] persons = {
+                new Person(30, "KNin1"),
+                new Person(23, "xiaoming"),
+                new Person(27, "laowang"),
+                new Person(50, "Tom")
+        };
+        Object[] topK = TopK.solution(persons, getComparator(), 3);
+        for (Object person : topK) {
+            System.out.println(person);
+        }
+        Assert.assertEquals("Tom", ((Person) topK[0]).name);
+    }
 }
