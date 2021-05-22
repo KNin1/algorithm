@@ -21,7 +21,16 @@ public class QuickSort {
         quickSort(arr, pivot+1, end);
     }
 
+    /**
+     * 分区函数
+     * 将待排序区间分成三个区域：小于 pivot 区域、pivot、大于 pivot 区域
+     */
     private static int partition(int[] arr, int start, int end) {
+        /*
+         通过游标 i 将 arr[start, end-1]分成两部分，arr[p...i-1]中元素都小于 pivot，称为已处理区间，
+         arr[i...end-1]是未处理区间，每次从未处理区间中取出一个元素 arr[j] 与 pivot 比较，如果小于 pivot，
+         则将其加入到已处理区间的尾部，即 arr[i]
+         */
         int pivot = arr[end];
         int i = start;
         for (int j = start; j < end; j++) {
