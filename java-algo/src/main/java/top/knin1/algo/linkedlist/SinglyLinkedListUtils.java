@@ -104,6 +104,7 @@ public class SinglyLinkedListUtils {
             if (index < k) {
                 return p;
             }
+            // 倒数第 k 个结点正好是链表头结点
             SinglyLinkedList.Node<T> temp = p;
             p = p.getNext();
             temp.setNext(null);
